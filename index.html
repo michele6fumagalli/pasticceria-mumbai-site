@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────── -->
+  <title>Pasticceria Fumagalli — Italian Patisserie, Coming to Mumbai</title>
+  <meta name="description" content="A family that's been making panettone since 1953. Authentic Italian patisserie, opening in Mumbai. Be the first to know." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#803043" />
+
+  <!-- BEFORE LAUNCH: replace the content value below with the real canonical URL
+       e.g. https://pasticceriafumagalli.in/ or https://your-username.github.io/pasticceria-mumbai/ -->
+  <link rel="canonical" href="REPLACE_WITH_CANONICAL_URL" />
+
+  <!-- ── Open Graph / WhatsApp Preview ─────────────────────────── -->
+  <!-- WhatsApp uses og:title, og:description, and og:image to build share cards.
+       All three must be set before the page URL is shared on WhatsApp.          -->
+  <meta property="og:title" content="Pasticceria Fumagalli — Italian Patisserie, Coming to Mumbai" />
+  <meta property="og:description" content="A family that's been making panettone since 1953. Authentic Italian patisserie, opening in Mumbai. Be the first to know." />
+
+  <!-- BEFORE LAUNCH: replace the content value below with the absolute URL to the
+       1200×630px OG image (hero shot or product spread).
+       e.g. https://pasticceriafumagalli.in/og-image.jpg
+       The image must be publicly accessible — WhatsApp crawls it server-side. -->
+  <meta property="og:image" content="REPLACE_WITH_ABSOLUTE_OG_IMAGE_URL" />
+
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- BEFORE LAUNCH: replace the content value below with the canonical page URL
+       (same value as the <link rel="canonical"> above) -->
+  <meta property="og:url" content="REPLACE_WITH_CANONICAL_URL" />
+
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ── GA4 — loaded conditionally after cookie consent ──────────
+       GA4 is NOT loaded unconditionally. It is injected dynamically
+       by script.js only after the user accepts cookie consent, or if
+       a prior acceptance is stored in localStorage.
+       The GA4 Measurement ID (G-XXXXXXXXXX) is defined in script.js.
+       Replace G-XXXXXXXXXX in script.js before launch. ──────────── -->
+
+  <!-- ── Google Fonts ───────────────────────────────────────────
+       Loaded with display=swap to prevent render-blocking (PRD Section 4.5).
+       Two typefaces only: Cormorant Garamond (headlines) + DM Sans (body).   -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────
+       Vanilla CSS — no framework, no build step.
+       Note: file is ~24KB unminified. PRD Section 4.1 states <10KB as a
+       guideline against CSS frameworks; the approved prototype design system
+       justifies the size. See build notes for documented deviation.            -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ── Favicon ────────────────────────────────────────────────
+       BEFORE LAUNCH: add a real favicon.
+       Minimum: favicon.ico in the root directory.
+       Recommended: add an SVG favicon and apple-touch-icon for mobile.
+       e.g. <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+            <link rel="icon" href="favicon.ico" sizes="any" />
+            <link rel="apple-touch-icon" href="apple-touch-icon.png" /> -->
+
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 1 — HERO
+       ════════════════════════════════════════════════════════ -->
+  <section class="hero" aria-labelledby="hero-heading">
+
+    <!-- Brand wordmark pinned to top-left -->
+    <header class="hero__topbar" role="banner">
+      <div class="hero__wordmark" aria-label="Pasticceria Fumagalli">
+        Pasticceria Fumagalli
+      </div>
+    </header>
+
+    <!-- Full-bleed hero visual -->
+    <div class="hero__visual" aria-hidden="true">
+      <img
+        src="images/hero.jpg"
+        alt="Artisan panettone and Italian patisserie spread, warm golden tones"
+        width="1440"
+        height="810"
+        loading="eager"
+        fetchpriority="high"
+        class="hero__image"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <!-- Headline + CTA overlaid on image -->
+    <div class="hero__content">
+      <p class="hero__eyebrow">Since 1953 · Barzanò, Lombardy</p>
+
+      <!-- id for aria-labelledby on the section -->
+      <h1 class="hero__headline" id="hero-heading">
+        From a family that's been making&nbsp;<em>panettone</em>&nbsp;since 1953.
+      </h1>
+
+      <p class="hero__subheadline">
+        Authentic Italian patisserie. Coming to Mumbai.
+      </p>
+
+      <button
+        class="btn-primary"
+        id="hero-cta"
+        type="button"
+        aria-label="Be the first to know — scroll to waitlist"
+      >
+        Be the first to know
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          aria-hidden="true"
+          focusable="false"
+          width="16"
+          height="16"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scroll hint decoration — decorative only -->
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 2 — HERITAGE / BRAND STORY
+       ════════════════════════════════════════════════════════ -->
+  <section class="heritage" aria-labelledby="heritage-heading">
+    <div class="container">
+      <div class="heritage__layout">
+
+        <!-- Text column -->
+        <div class="heritage__text-col">
+          <p class="section-label heritage__section-label" aria-hidden="true">Our Story</p>
+
+          <h2 class="heritage__headline" id="heritage-heading">
+            A bakery that grew into<br/><em>a tradition</em>.
+          </h2>
+
+          <div class="heritage__body">
+            <p>
+              In 1953, in the small Lombard village of Barzanò, the Fumagalli family
+              opened their first bakery — before Italy's economic recovery had fully
+              begun. What started as a neighbourhood bakery grew into a pasticceria
+              known across the region.
+            </p>
+
+            <p>
+              The second generation expanded from bread to patisserie, building a
+              reputation for quality that has never wavered. Today, Pasticceria
+              Fumagalli's panettone is shipped to customers as far as North America
+              and Oman — a product that carries the weight of two generations of craft
+              wherever it travels.
+            </p>
+
+            <p>
+              Mumbai is a city that has always known what it wants — and increasingly,
+              it wants the real thing. There is no authentic Italian patisserie here.
+              Not a local interpretation, not an approximation. The gap is real, and
+              the moment is right. Pasticceria Fumagalli is coming to Mumbai because
+              this city deserves something genuine.
+            </p>
+          </div>
+
+          <blockquote class="heritage__credential">
+            <p>"4.3 stars across nearly a thousand reviews — and customers who have been coming back for 20 to 30 years."</p>
+            <cite>Pasticceria Fumagalli, Barzanò — Google Reviews</cite>
+          </blockquote>
+        </div>
+
+        <!-- Visual column -->
+        <div class="heritage__visual-col">
+          <img
+            src="images/heritage.jpg"
+            alt="Pasticceria Fumagalli interior — artisan bakery at work"
+            width="800"
+            height="1000"
+            loading="lazy"
+            class="heritage__image-main"
+          />
+
+          <div class="heritage__stats" role="list" aria-label="Heritage statistics">
+            <div class="heritage__stat" role="listitem">
+              <div class="heritage__stat-number" aria-label="Founded in 1953">1953</div>
+              <div class="heritage__stat-label">Year Founded</div>
+            </div>
+            <div class="heritage__stat" role="listitem">
+              <div class="heritage__stat-number" aria-label="Second generation">2nd</div>
+              <div class="heritage__stat-label">Generation Family Business</div>
+            </div>
+            <div class="heritage__stat" role="listitem">
+              <div class="heritage__stat-number" aria-label="4.3 star rating">4.3★</div>
+              <div class="heritage__stat-label">Nearly 1,000 Reviews</div>
+            </div>
+            <div class="heritage__stat" role="listitem">
+              <div class="heritage__stat-number" aria-label="30 year customer loyalty">30yr</div>
+              <div class="heritage__stat-label">Customer Loyalty</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 3 — PRODUCT SHOWCASE
+       ════════════════════════════════════════════════════════ -->
+  <section class="products" aria-labelledby="products-heading">
+    <div class="container">
+
+      <header class="products__header">
+        <p class="section-label" aria-hidden="true">Our Products</p>
+        <h2 class="products__headline" id="products-heading">
+          Made the way it has always been made.
+        </h2>
+        <p class="products__eggless-statement">
+          All three products are available in eggless variants — because we know Mumbai.
+        </p>
+      </header>
+
+      <div class="products__grid" role="list">
+
+        <!-- Card 1: Panettone -->
+        <article class="product-card" role="listitem">
+          <div class="product-card__image-wrap">
+            <img
+              src="images/panettone.jpg"
+              alt="Panettone — slow-leavened Milanese bread, golden and domed"
+              width="600"
+              height="600"
+              loading="lazy"
+              class="product-card__image"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Panettone</h3>
+            <p class="product-card__description">
+              A slow-leavened Milanese tradition — 36 hours of preparation, two
+              generations of refinement. The panettone that customers have been
+              ordering from Barzanò since 1987.
+            </p>
+            <span class="product-card__eggless" aria-label="Available in eggless variant">
+              Available in eggless variant.
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 2: Pepita Biscuits -->
+        <article class="product-card" role="listitem">
+          <div class="product-card__image-wrap">
+            <img
+              src="images/pepita-biscuits.jpg"
+              alt="Pepita biscuits — chocolate chip shortbread with an Italian crumb"
+              width="600"
+              height="600"
+              loading="lazy"
+              class="product-card__image"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Pepita Biscuits</h3>
+            <p class="product-card__description">
+              The Fumagalli house biscuit — a generous chocolate chip biscuit with
+              the short, crumbly character of Italian pasticceria. Made to be eaten
+              with coffee, the way Lombardy intended.
+            </p>
+            <span class="product-card__eggless" aria-label="Available in eggless variant">
+              Available in eggless variant.
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 3: Ciambella -->
+        <article class="product-card" role="listitem">
+          <div class="product-card__image-wrap">
+            <img
+              src="images/ciambella.jpg"
+              alt="Ciambella — Italian ring cake, lightly dusted and golden"
+              width="600"
+              height="600"
+              loading="lazy"
+              class="product-card__image"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Ciambella</h3>
+            <p class="product-card__description">
+              A classic Lombard ring cake, baked in the tradition of Italian home
+              kitchens. Lightly sweet, fragrant with citrus, made to last a week
+              and still taste made this morning.
+            </p>
+            <span class="product-card__eggless" aria-label="Available in eggless variant">
+              Available in eggless variant.
+            </span>
+          </div>
+        </article>
+
+      </div><!-- /.products__grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 4 — CTA / WAITLIST
+       ════════════════════════════════════════════════════════ -->
+  <section class="waitlist" id="waitlist" aria-labelledby="waitlist-heading">
+    <div class="container">
+      <div class="waitlist__inner">
+
+        <p class="section-label waitlist__section-label" aria-hidden="true">Be First</p>
+
+        <h2 class="waitlist__headline" id="waitlist-heading">
+          Be the first to know when we open.
+        </h2>
+
+        <p class="waitlist__body">
+          Pasticceria Fumagalli is coming to Mumbai. Enter your email and we'll notify
+          you the moment we're ready to open our doors — for gifts, pre-orders, and
+          everything in between.
+        </p>
+
+        <!-- Form wrap — hidden by script after successful submit -->
+        <div class="waitlist__form-wrap" id="waitlist-form-wrap">
+          <form
+            class="waitlist__form"
+            id="waitlist-form"
+            novalidate
+            aria-label="Join the waitlist"
+          >
+            <div class="waitlist__input-group">
+              <label for="email-input" class="visually-hidden">Your email address</label>
+              <input
+                type="email"
+                id="email-input"
+                name="email"
+                class="waitlist__input"
+                placeholder="Your email address"
+                autocomplete="email"
+                required
+                aria-describedby="email-error"
+                aria-invalid="false"
+              />
+              <span
+                class="waitlist__error"
+                id="email-error"
+                role="alert"
+                aria-live="polite"
+              >
+                Please enter a valid email address.
+              </span>
+            </div>
+
+            <button
+              type="submit"
+              class="waitlist__submit"
+              aria-label="Submit email to join the waitlist"
+            >
+              Notify me
+            </button>
+          </form>
+
+          <p class="waitlist__microcopy" aria-live="polite">
+            No spam. Just one email when we're open.
+          </p>
+        </div>
+
+        <!-- Confirmation — shown after valid submit, hidden by default -->
+        <div
+          class="waitlist__confirmation"
+          id="waitlist-confirmation"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <div class="waitlist__confirmation-icon" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              focusable="false"
+              width="22"
+              height="22"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </div>
+          <h3 class="waitlist__confirmation-headline">You're on the list.</h3>
+          <p class="waitlist__confirmation-body">
+            We'll be in touch when Pasticceria Mumbai opens its doors.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 5 — FOOTER
+       ════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__inner">
+
+        <div class="footer__brand-block">
+          <p class="footer__brand-name">Pasticceria Fumagalli</p>
+          <p class="footer__tagline">Italian patisserie. Since 1953.</p>
+        </div>
+
+        <div class="footer__divider" aria-hidden="true"></div>
+
+        <!-- BEFORE LAUNCH: confirm Instagram handle with project owner.
+             Current value @fumagalli_pasticceria is the Barzanò account.
+             Open question OQ-5 in PRD: will a separate @pasticceriamumbai handle
+             be created for the Mumbai launch? Confirm before the page goes live. -->
+        <a
+          href="https://www.instagram.com/fumagalli_pasticceria"
+          class="footer__instagram-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pasticceria Fumagalli on Instagram — opens in new tab"
+        >
+          <!-- Instagram icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+            width="18"
+            height="18"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="3.5"/>
+            <circle cx="17.5" cy="6.5" r="0.01" fill="currentColor" stroke="none"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          @fumagalli_pasticceria
+        </a>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>Pasticceria Fumagalli · Barzanò, Lombardy, Italy · Pre-launch demand validation page</p>
+        <button type="button" id="footer-cookies-link" class="footer__cookies-link">Cookies</button>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       COOKIE CONSENT BANNER
+       Shown on first visit only (no stored consent in localStorage).
+       Accept/Decline both equal-prominence buttons (GDPR requirement).
+       GA4 loads only after Accept — never unconditionally.
+       Preference stored in localStorage (not a cookie).
+       ════════════════════════════════════════════════════════ -->
+  <div id="cookie-banner" role="dialog" aria-label="Cookie consent" style="display:none;">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">
+        This page uses Google Analytics cookies to count visits and measure interest.
+        You can accept or decline — this won't affect your ability to use the page.
+      </p>
+      <div class="cookie-banner__actions">
+        <button id="cookie-accept" type="button" class="cookie-btn cookie-btn--accept">Accept</button>
+        <button id="cookie-decline" type="button" class="cookie-btn cookie-btn--decline">Decline</button>
+        <button id="cookie-learn-more" type="button" class="cookie-btn cookie-btn--text">Learn more</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       COOKIE POLICY MODAL
+       Triggered from banner "Learn more" and footer "Cookies" link.
+       Keyboard-accessible: focus trapped when open, Escape closes.
+       ════════════════════════════════════════════════════════ -->
+  <div id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" style="display:none;">
+    <div class="cookie-modal__backdrop"></div>
+    <div class="cookie-modal__panel">
+      <div class="cookie-modal__header">
+        <h2 class="cookie-modal__title" id="cookie-modal-title">Cookies</h2>
+        <button id="cookie-modal-close" type="button" class="cookie-modal__close" aria-label="Close cookie policy">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" width="20" height="20">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="cookie-modal__body">
+        <p class="cookie-modal__intro">
+          This page uses Google Analytics (GA4) to count visits and measure interest in Pasticceria Mumbai. The cookies below are set by Google. They contain a pseudonymous browser ID — not your name, email, or any directly identifying information.
+        </p>
+        <div class="cookie-modal__table-wrap">
+          <table class="cookie-modal__table">
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Set by</th>
+                <th>Purpose</th>
+                <th>Duration</th>
+                <th>Data sent to</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>_ga</code></td>
+                <td>Google LLC (GA4)</td>
+                <td>Distinguishes unique visitors. Stores a random browser ID.</td>
+                <td>2 years</td>
+                <td>Google LLC, United States</td>
+              </tr>
+              <tr>
+                <td><code>_gid</code></td>
+                <td>Google LLC (GA4)</td>
+                <td>Distinguishes sessions within 24 hours.</td>
+                <td>24 hours</td>
+                <td>Google LLC, United States</td>
+              </tr>
+              <tr>
+                <td><code>_ga_XXXXXXXXXX</code></td>
+                <td>Google LLC (GA4)</td>
+                <td>GA4 property-specific session cookie. Contains session ID and count.</td>
+                <td>2 years</td>
+                <td>Google LLC, United States</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="cookie-modal__bullets">
+          <li><strong>To opt out:</strong> You can block or delete cookies at any time in your browser settings. This won't affect your ability to use this page. You can also opt out of Google Analytics across all websites using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
+          <li><strong>What we do not do:</strong> We do not use these cookies for advertising, profiling, or cross-site tracking. Google Signals is disabled. No email or personal information is collected or stored by this page.</li>
+          <li><strong>Questions:</strong> Contact [owner's email address] for anything about how this page uses cookies.</li>
+        </ul>
+        <p class="cookie-modal__updated">Last updated: April 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       JAVASCRIPT
+       Loaded with defer: executes after HTML is parsed, does not
+       block rendering. The IIFE in script.js guards against DOM
+       not being ready in case defer is removed.
+       ════════════════════════════════════════════════════════ -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
