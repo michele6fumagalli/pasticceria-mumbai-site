@@ -39,14 +39,25 @@
     window.gtag('config', GA4_ID);
   }
 
-  // Read consent state from localStorage
+  // Read consent state from cookie
   function getConsent() {
-    try { return localStorage.getItem('cookieConsent'); } catch (e) { return null; }
+    try {
+      var match = document.cookie.match(/(?:^|;\s*)cookieConsent=([^;]+)/);
+      return match ? decodeURIComponent(match[1]) : null;
+    } catch (e) { return null; }
   }
 
-  // Persist consent state to localStorage (not a cookie)
+  // Persist consent state as a first-party cookie (365-day expiry, SameSite=Lax)
+  // This is a strictly necessary functional cookie — exempt from consent under GDPR/ePrivacy.
   function setConsent(val) {
-    try { localStorage.setItem('cookieConsent', val); } catch (e) {}
+    try {
+      var expires = new Date();
+      expires.setFullYear(expires.getFullYear() + 1);
+      document.cookie = 'cookieConsent=' + encodeURIComponent(val) +
+        '; expires=' + expires.toUTCString() +
+        '; path=/' +
+        '; SameSite=Lax';
+    } catch (e) {}
   }
 
   function hideBanner() {
