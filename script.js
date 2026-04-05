@@ -47,16 +47,19 @@
     } catch (e) { return null; }
   }
 
-  // Persist consent state as a first-party cookie (365-day expiry, SameSite=Lax)
-  // This is a strictly necessary functional cookie — exempt from consent under GDPR/ePrivacy.
+  // Persist consent decision as a first-party cookie.
+  // 12-month expiry (max-age=31536000 seconds), Secure, SameSite=Lax.
+  // This is a strictly necessary functional cookie — it records the user's own
+  // privacy decision and is required to honour it across sessions.
+  // Exempt from the consent requirement it governs (you cannot require consent
+  // to record that consent was refused).
   function setConsent(val) {
     try {
-      var expires = new Date();
-      expires.setFullYear(expires.getFullYear() + 1);
       document.cookie = 'cookieConsent=' + encodeURIComponent(val) +
-        '; expires=' + expires.toUTCString() +
+        '; max-age=31536000' +
         '; path=/' +
-        '; SameSite=Lax';
+        '; SameSite=Lax' +
+        '; Secure';
     } catch (e) {}
   }
 
